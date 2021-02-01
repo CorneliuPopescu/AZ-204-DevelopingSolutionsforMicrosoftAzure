@@ -147,9 +147,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
     1.  In the **Account kind** list, select **StorageV2 (general purpose v2)**.
     
     1.  In the **Replication** list, select **Locally-redundant storage (LRS)**.
-    
-    1.  In the **Access tier (default)** section, ensure that **Hot** is selected.
-    
+        
     1.  Select **Review + Create**.
 
 1.  On the **Review + Create** tab, review the options that you specified in the previous steps.
@@ -332,7 +330,7 @@ In this exercise, you built a basic workflow that starts when it's triggered by 
 
     1.  Select the single **GET** operation.
 
-    1.  Copy the value of the **Request URL** field. (You will use this value later in the lab.)
+    1.  Observe the value of the **Request URL** field.
 
     1.  Select **Send**.
 

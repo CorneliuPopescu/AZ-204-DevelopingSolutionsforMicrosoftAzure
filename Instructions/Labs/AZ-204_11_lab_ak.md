@@ -82,9 +82,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
     1.  In the **Account kind** list, select **StorageV2 (general purpose v2)**.
     
     1.  In the **Replication** list, select **Locally-redundant storage (LRS)**.
-    
-    1.  In the **Access tier (default)** section, ensure that **Hot** is selected.
-    
+        
     1.  Select **Review + Create**.
 
 1.  On the **Review + Create** tab, review the options that you specified in the previous steps.
@@ -159,6 +157,7 @@ In this exercise, you created a new Azure Storage account that you'll use throug
 
     ```
     using System;
+    using System.Text;
     using System.Threading.Tasks;
     ```
 
@@ -199,6 +198,7 @@ In this exercise, you created a new Azure Storage account that you'll use throug
     using Azure.Storage.Queues;
     using Azure.Storage.Queues.Models;
     using System;
+    using System.Text;
     using System.Threading.Tasks;
 
     public class Program
@@ -336,7 +336,7 @@ In this exercise, you configured your .NET project to access the Storage service
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
 
         Console.WriteLine($"---Existing Messages---");
         int batchSize = 10;
@@ -467,7 +467,7 @@ In this exercise, you configured your .NET project to access the Storage service
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         foreach(QueueMessage message in messages?.Value)
         {
@@ -532,7 +532,7 @@ In this exercise, you read and deleted existing messages from the Storage queue 
     1.  Add the following line of code to invoke the **SendMessageAsync** method of the **QueueClient** class by using the *greeting* variable as a parameter
 
         ```
-        await client.SendMessageAsync(greeting);        
+        await client.SendMessageAsync(Convert.ToBase64String(Encoding.UTF8.GetBytes(greeting)));        
         ```
 
     1.  Add the following line of code to render the content of the message that you sent:
@@ -546,11 +546,11 @@ In this exercise, you read and deleted existing messages from the Storage queue 
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         Console.WriteLine($"---New Messages---");
         string greeting = "Hi, Developer!";
-        await client.SendMessageAsync(greeting);
+        await client.SendMessageAsync(Convert.ToBase64String(Encoding.UTF8.GetBytes(greeting)));
         
         Console.WriteLine($"Sent Message:\t{greeting}");
     }

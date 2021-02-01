@@ -81,8 +81,6 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
     1.  In the **Replication** drop-down list, select **Read-access geo-redundant storage (RA-GRS)**.
 
-    1.  In the **Access tier** section, ensure that **Hot** is selected.
-
     1.  Select **Review + Create**.
 
 1.  On the **Review + Create** tab, review the options that you selected during the previous steps.
@@ -418,7 +416,7 @@ In this exercise, you created a couple of placeholder containers in the storage 
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
     }
@@ -515,7 +513,7 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
 
@@ -606,7 +604,7 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
 
@@ -720,7 +718,7 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
     ```
     public static async Task Main(string[] args)
     {
-        \\ Existing code removed for brevity
+        // Existing code removed for brevity
         
         await EnumerateContainersAsync(serviceClient);
 
